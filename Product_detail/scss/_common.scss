@@ -1,0 +1,43 @@
+a{
+    color: #333;
+    text-decoration: none;
+    font-weight: 700;
+}
+a:hover{
+    color:#0d3982;
+}
+ul,li,ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+}
+div {
+    display: block;
+}
+img{
+    max-width: 100%;
+    width: 100%;
+    vertical-align: middle;
+}
+figure{
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+p{
+    margin-top: 0;
+    margin-bottom: 13px;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+.color-red{
+    color: #f44336;
+}
