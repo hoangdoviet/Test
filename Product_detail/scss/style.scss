@@ -18,6 +18,7 @@ body{
     &-list{
 
         display: flex;
+        position: relative;
         flex-flow: row wrap;
         align-content: flex-start;
         &-item{
