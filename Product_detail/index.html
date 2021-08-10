@@ -6,16 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Product_detail/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <title>Document</title>
     
 </head>
 
-<body>
+<body onresize="myFunction()">
     <div class="product">
         <div class="container">
             <div class="row">
-                <div class="product-list col-23-1024 col-1-768 ">
-                    <div class="product-list-item fade">
+                <div class="product-list col-23-1024 col-1-768">
+                    <div class="product-list-item fade ">
                         <figure class="product-item__image">
                             <img src="./img/1.PNG" alt="">
                         </figure>
@@ -69,12 +70,16 @@
                         <div class="form-control product-detail-color">
                             <label class="product-detail-color__select">
                                 <input type="radio" checked="checked" value="value1" name="radio"/>
-                                <span class="checkmark"></span>
+                                <div class="checkmark-container">
+                                    <span class="checkmark"></span>
+                                </div>
                                 <span class="text">Black</span>
                             </label>
                             <label class="product-detail-color__select">
                                 <input type="radio" checked="checked" value="value2" name="radio" />
-                                <span class="checkmark"></span>
+                                <div class="checkmark-container">
+                                    <span class="checkmark"></span>
+                                </div>
                                 <span class="text">Grey</span>
                             </label>
     

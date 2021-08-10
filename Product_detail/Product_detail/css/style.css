@@ -80,6 +80,7 @@ body {
 }
 
 .product-list a {
+  position: absolute;
   display: none;
 }
 
@@ -103,7 +104,7 @@ body {
 }
 
 .product-list .prev:hover, .product-list .next:hover {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .product-list .fade {
@@ -167,16 +168,26 @@ body {
   cursor: pointer;
 }
 
+.product-detail-color__select .checkmark-container {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  padding: 1px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #bfbfbf;
+}
+
 .product-detail-color__select .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
   height: 16px;
   width: 16px;
   background-color: #bfbfbf;
   border-radius: 50%;
   border: 1px solid #fff;
-  display: flex;
+  display: block;
   justify-items: center;
 }
 
@@ -186,22 +197,34 @@ body {
   display: none;
 }
 
-.product-detail-color__select:hover input ~ .checkmark {
+.product-detail-color__select:hover input ~ .checkmark-container {
+  border: 1px solid #949292;
+}
+
+.product-detail-color__select:hover input ~ .checkmark-container .checkmark {
   background-color: #949292;
 }
 
-.product-detail-color__select input:checked ~ .checkmark {
+.product-detail-color__select input:checked ~ .checkmark-container .checkmark {
   background-color: #4e4e4e;
 }
 
-.product-detail-color__select input:checked ~ .checkmark:after {
+.product-detail-color__select input:checked ~ .checkmark-container {
+  border: 1px solid #000;
+}
+
+.product-detail-color__select input ~ .checkmark-container {
+  border: unset;
+}
+
+.product-detail-color__select input:checked .checkmark-container .checkmark:after {
   display: block;
 }
 
 .product-detail-color__select .text {
   display: none;
   position: absolute;
-  bottom: -32px;
+  bottom: -24px;
   left: -4px;
   font-size: 12px;
 }
@@ -274,11 +297,6 @@ body {
   }
   .col-1-768 {
     width: 100%;
-  }
-  .product-list {
-    display: flex;
-    flex-flow: row wrap;
-    align-content: flex-start;
   }
   .product-list-item {
     flex: 0 0 100%;
