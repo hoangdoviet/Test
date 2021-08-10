@@ -1,11 +1,11 @@
 var slideIndex = 1;
-
+var timeout=setTimeout(myFunction, 500);
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
 function myFunction() {
-  var width = window.outerWidth;
+  var width = window.innerWidth;
   console.log(width);
   if (width <= 768) {
     showSlides(slideIndex);
@@ -14,6 +14,7 @@ function myFunction() {
     show();
   }
 }
+
 
 function showSlides(n) {
   var i;
