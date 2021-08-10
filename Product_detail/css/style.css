@@ -69,6 +69,7 @@ body {
 }
 
 .product-list {
+  position: relative;
   display: flex;
   flex-flow: row wrap;
   align-content: flex-start;
@@ -78,9 +79,6 @@ body {
   flex: 0 0 50%;
 }
 
-.product-list a {
-  display: none;
-}
 
 .product-list .prev, .product-list .next {
   cursor: pointer;
@@ -94,11 +92,14 @@ body {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  z-index: 1000;
+  left: 0;
 }
 
 .product-list .next {
   right: 0;
   border-radius: 3px 0 0 3px;
+  left: unset;
 }
 
 .product-list .prev:hover, .product-list .next:hover {
